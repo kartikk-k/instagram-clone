@@ -9,12 +9,11 @@ interface Props {
 
 function Sidebar({ activeTab }: Props) {
     return (
-        <div className='max-w-[220px] flex flex-col justify-between bg-gray-100 min-h-screen'>
+        <div className='max-w-[220px] hidden md:flex flex-col justify-between bg-gray-100 min-h-screen'>
             <div>
-
                 {/* app logo */}
                 <div className='flex items-center gap-2 px-4 py-6'>
-                    <div className=''>
+                    <div className='cursor-pointer'>
                         <AppLogo className='w-32 h-auto' />
                     </div>
                 </div>
@@ -33,7 +32,7 @@ function Sidebar({ activeTab }: Props) {
                         </div>
                     </div>
 
-                    <div>
+                    <div className='cursor-pointer'>
                         <p className='font-bold text-center text-gray-800'>Priyanka Chopra</p>
                         <p className='text-xs text-center text-gray-500'>@priyanka_chopra</p>
                     </div>
