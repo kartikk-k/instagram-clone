@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from './Menu'
-import { AppLogo } from '../Icons'
+import { AppLogo, LogoutIcon } from '../Icons'
 import { ExitIcon } from '@radix-ui/react-icons'
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 
 function Sidebar({ activeTab }: Props) {
     return (
-        <div className='max-w-[220px] hidden md:flex flex-col justify-between bg-gray-100 min-h-screen'>
+        <div className='min-w-[220px] hidden md:flex flex-col justify-between bg-gray-100 min-h-screen'>
             <div>
                 {/* app logo */}
                 <div className='flex items-center gap-2 px-4 py-6'>
@@ -19,9 +19,11 @@ function Sidebar({ activeTab }: Props) {
                 </div>
 
                 {/* profile info */}
-                <div className='px-4 py-6 space-y-4'>
-                    <div className='flex justify-center'>
-                        <div className='inline-flex mx-auto cursor-pointer justify-center p-[3px] rounded-full bg-theme'>
+                <div className='relative px-4 py-6 space-y-4'>
+                    <div className='flex items-center justify-center group'>
+                        <div className='absolute mx-auto z-0 w-20 h-20 cursor-pointer justify-center p-[3px] rounded-full bg-theme'>
+                        </div>
+                        <div className='z-20 flex justify-center cursor-pointer group'>
                             <div className='p-1 bg-white rounded-full'>
                                 <img
                                     className='object-cover w-16 h-16 rounded-full bg-theme'
@@ -42,8 +44,9 @@ function Sidebar({ activeTab }: Props) {
                 <Menu />
             </div>
 
+            {/* logout button */}
             <div className='flex items-center gap-2 px-4 py-6 duration-200 cursor-pointer hover:scale-105 group active:scale-95'>
-                <ExitIcon className='w-5 h-5 text-gray-600 group-hover:text-gray-800' />
+                <LogoutIcon className='w-5 h-5 fill-gray-600 group-hover:fill-gray-800' />
                 <p className='text-sm text-gray-600 group-hover:text-gray-800'>Logout</p>
             </div>
         </div>

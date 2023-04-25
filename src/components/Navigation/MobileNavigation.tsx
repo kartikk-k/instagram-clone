@@ -2,7 +2,7 @@ import React from 'react'
 import { TokensIcon, PlusIcon, PersonIcon, VideoIcon, MagnifyingGlassIcon, PaperPlaneIcon, HeartIcon, GearIcon } from '@radix-ui/react-icons'
 import { AddIcon, HomeIcon, ReelsIcon, SearchIcon } from '../Icons'
 
-const IconClass = "w-7 h-7 stroke-gray-600 active:scale-90 duration-200 cursor-pointer"
+const IconClass = "w-6 h-6 stroke-gray-600 active:scale-90 duration-200 cursor-pointer"
 
 function MobileNavigation() {
     return (

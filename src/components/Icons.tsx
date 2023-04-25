@@ -30,6 +30,14 @@ export const HomeIcon = ({ className }: IconProps) => {
         </svg>
     )
 }
+export const LogoutIcon = ({ className }: IconProps) => {
+    return (
+        <svg width="24" height="24" className={className ? className : "fill-black"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 7C2 4.79086 3.79086 3 6 3H11C13.2091 3 15 4.79086 15 7V8C15 8.55228 14.5523 9 14 9C13.4477 9 13 8.55228 13 8V7C13 5.89543 12.1046 5 11 5H6C4.89543 5 4 5.89543 4 7V17C4 18.1046 4.89543 19 6 19H11C12.1046 19 13 18.1046 13 17V16C13 15.4477 13.4477 15 14 15C14.5523 15 15 15.4477 15 16V17C15 19.2091 13.2091 21 11 21H6C3.79086 21 2 19.2091 2 17V7Z" />
+            <path d="M6 12C6 11.4477 6.44772 11 7 11H18.5858L17.2929 9.70711C16.9024 9.31658 16.9024 8.68342 17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289L21.6364 11.2222C21.6486 11.2344 21.6604 11.2467 21.6719 11.2593C21.8734 11.4423 22 11.7064 22 12C22 12.2936 21.8734 12.5577 21.6719 12.7407C21.6604 12.7533 21.6486 12.7656 21.6364 12.7778L18.7071 15.7071C18.3166 16.0976 17.6834 16.0976 17.2929 15.7071C16.9024 15.3166 16.9024 14.6834 17.2929 14.2929L18.5858 13H7C6.44772 13 6 12.5523 6 12Z" />
+        </svg>
+    )
+}
 
 export const ActiveHomeIcon = ({ className }: IconProps) => {
     return (
@@ -77,6 +85,7 @@ export const ExploreIcon = ({ className }: IconProps) => {
 
     )
 }
+
 export const AddIcon = ({ className }: IconProps) => {
     return (
         <svg width="24" height="24" className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,6 +169,22 @@ export const SettingIcon = ({ className }: IconProps) => {
                 <clipPath id="clip0_1_43">
                     <rect width="24" height="24" fill="white" />
                 </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
+
+export const StoryBorder = ({ className }: IconProps) => {
+    return (
+        <svg width="74" height="74" className={className} viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="37" cy="37" r="35" stroke="url(#paint0_linear_60_2)" strokeWidth="2" strokeLinecap="round" />
+            <defs>
+                <linearGradient id="paint0_linear_60_2" x1="67.1238" y1="5.35913" x2="6.44272" y2="68.6409" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#FF469F" />
+                    <stop offset="0.592597" stopColor="#F91BFD" />
+                    <stop offset="1" stopColor="#7737FE" />
+                </linearGradient>
             </defs>
         </svg>
     )
