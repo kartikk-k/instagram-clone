@@ -2,6 +2,7 @@ import React from 'react'
 import Menu from './Menu'
 import { AppLogo, LogoutIcon } from '../Icons'
 import { ExitIcon } from '@radix-ui/react-icons'
+import Image from 'next/image'
 
 interface Props {
     activeTab: string
@@ -9,12 +10,13 @@ interface Props {
 
 function Sidebar({ activeTab }: Props) {
     return (
-        <div className='min-w-[220px] hidden md:flex flex-col justify-between bg-gray-100 min-h-screen'>
+        <div className='min-w-[220px] h-screen sticky top-0 hidden md:flex flex-col justify-between '>
             <div>
                 {/* app logo */}
                 <div className='flex items-center gap-2 px-4 py-6'>
                     <div className='cursor-pointer'>
                         <AppLogo className='w-32 h-auto' />
+                        {/* <img src="main.png" /> */}
                     </div>
                 </div>
 

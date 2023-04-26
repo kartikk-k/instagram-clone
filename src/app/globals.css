@@ -7,7 +7,7 @@
 }
 
 .scrollbar-light::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
     height: 2px;
 }
 
@@ -31,4 +31,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }

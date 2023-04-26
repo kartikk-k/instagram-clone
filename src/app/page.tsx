@@ -19,9 +19,13 @@ export default function Home() {
         {/* navigation for big screens */}
         <Sidebar activeTab='' />
 
-        <div className='w-full'>
+        <div className='w-full bg-gray-100'>
           <Stories />
-          {/* <Feed /> */}
+          <Feed />
+        </div>
+
+        <div className='p-4 hidden border-l border-gray-400 md:block min-w-[220px] sticky top-0'>
+          <p>Hello</p>
         </div>
 
       </main>

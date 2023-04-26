@@ -3,7 +3,7 @@ import { AppLogo, LikeIcon, MessageIcon } from '../Icons'
 
 function MobileHeader() {
     return (
-        <div className='sticky top-0 z-30 flex items-center justify-between w-full px-4 py-6 bg-white md:hidden bg-opacity-40 backdrop-blur-md'>
+        <div className='sticky top-0 z-30 flex items-center justify-between w-full px-4 py-6 bg-white md:hidden'>
             {/* app logo */}
             <div className='flex items-center gap-2 '>
                 <div className='cursor-pointer'>

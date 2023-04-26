@@ -1,6 +1,9 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useRef } from 'react'
 import { AddIcon, StoryBorder } from '../Icons'
 import Image from 'next/image'
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 const stories = [
     "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9kZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
@@ -19,31 +22,39 @@ const stories = [
 ]
 
 function Stories() {
+    const ref = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        ref.current?.scrollTo({
+            left: 1600,
+        });
+    }, []);
     return (
-        <div className='pr-0 border-b md:border-none md:px-4 md:py-6'>
-            <h1 className='hidden text-lg font-semibold text-gray-800 md:block'>Stories</h1>
+        <div className='pr-0 md:px-2 md:py-6'>
+            <h1 className='hidden px-2 text-lg font-semibold text-gray-800 md:block'>Stories</h1>
 
             {/* stories */}
-            <div className='flex overflow-auto scrollbar-light'>
+            <ScrollContainer horizontal={true} hideScrollbars={false} className='flex px-2 bg-white rounded-md no-scrollbar'>
 
-                {/* add story */}
-                <div className='relative px-4 py-2 cursor-pointer md:pl-0 shrink-0'>
-                    <StoryBorder className='absolute w-14 h-14 md:w-16 md:h-16' />
-                    <div className='flex items-center justify-center bg-purple-200 rounded-full w-14 h-14 md:w-16 md:h-16'>
-                        <AddIcon className='w-3 md:w-5 stroke-gray-700' />
+                {/* stories */}
+                <div className='flex gap-4 px-4 my-2 md:pl-0 md:gap-6 shrink-0'>
+                    {/* logged in user story */}
+                    <div className='relative cursor-pointer md:pl-0 shrink-0'>
+                        <StoryBorder className='absolute w-16 h-16' />
+                        <div className='flex items-center justify-center w-16 h-16 bg-purple-200 rounded-full'>
+                            <AddIcon className='w-3 md:w-5 stroke-gray-700' />
+                        </div>
                     </div>
-                </div>
 
-                {/* following stories */}
-                <div className='flex gap-4 px-4 my-2 border-l border-gray-300 md:gap-6 shrink-0'>
+                    {/* following stories */}
                     {stories.map((story, index) => (
                         <div key={index} className='relative cursor-pointer select-none'>
-                            <StoryBorder className='absolute w-14 h-14 md:w-16 md:h-16' />
-                            <Image alt='' src={stories[index]!} width={100} height={100} className='object-cover object-center p-1 rounded-full w-14 h-14 md:w-16 md:h-16' />
+                            <StoryBorder className='absolute w-16 h-16' />
+                            <Image alt='' src={stories[index]!} width={100} height={100} className='object-cover object-center w-16 h-16 p-1 rounded-full' />
                         </div>
                     ))}
                 </div>
-            </div>
+            </ScrollContainer>
         </div>
     )
 }
